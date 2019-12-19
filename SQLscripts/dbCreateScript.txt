@@ -1,0 +1,29 @@
+USE [ToysStoreDB]
+
+CREATE TABLE [dbo].[Users](
+    [Id] [int] IDENTITY(1,1) NOT NULL,
+    [Login] [nvarchar](max) NOT NULL,
+    [Password] [nvarchar](max) NOT NULL,
+    [Email] [nvarchar](max) NOT NULL,    
+ CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED 
+(
+    [Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+CREATE TABLE [dbo].[Toys](
+    [Id] [int] IDENTITY(1,1) NOT NULL,
+    [Name] [nvarchar](max) NOT NULL,
+    [Description] [nvarchar](max) NOT NULL,
+    [Price] [int] NOT NULL,    
+ CONSTRAINT [PK_Toys] PRIMARY KEY CLUSTERED 
+(
+    [Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+CREATE TABLE [dbo].[Backet](
+    [UserId] [int] NOT NULL,
+    [ToyId] [int] NOT NULL,
+    [Count] [int] NOT NULL,    
+ ) ON [PRIMARY]

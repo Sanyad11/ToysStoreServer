@@ -1,0 +1,10 @@
+USE [ToysStoreDB]
+
+INSERT INTO [dbo].[Users](Login, Password, Email) VALUES ('Petro12', 'dsfsdfsf', 'cobaka@com.com'); 
+INSERT INTO [dbo].[Users](Login, Password, Email) VALUES ('Azazaza', 'Azazaza', 'azazaza@com.com'); 
+INSERT INTO [dbo].[Users](Login, Password, Email) VALUES ('Something', 'Textthat', 'imwriting@rtm.com'); 
+
+INSERT INTO [dbo].[Toys](Name, Description, Price) VALUES ('Somethinfghg', 'Textthgfhat', 56); 
+INSERT INTO [dbo].[Toys](Name, Description, Price) VALUES ('222Somethinfghg', '222Textthgfhat', 34); 
+
+INSERT INTO [dbo].[Backet](UserId, ToyId, Count) VALUES (1, 1, 2); 
