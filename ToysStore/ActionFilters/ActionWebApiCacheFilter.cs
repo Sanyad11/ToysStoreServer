@@ -36,6 +36,7 @@ namespace ToysStore.ActionFilters
                         actionContext.Response = cachedItem as HttpResponseMessage;
                     }
                 }
+                finally { }
             }
         }
 
