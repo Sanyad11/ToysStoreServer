@@ -24,10 +24,9 @@ namespace ToysStore
             var logger = container.Resolve<ILogger>();
             RegisterWebApiFilters(GlobalConfiguration.Configuration.Filters, logger);
 
-            Mapper.Initialize(cfg =>
-            {
-                cfg.AddProfile<AutoMapperProfile>();
-            });
+
+            var configuration = new MapperConfiguration(cfg =>
+                cfg.AddProfile<AutoMapperProfile>());
 
             logger.Debug("App started");
         }
